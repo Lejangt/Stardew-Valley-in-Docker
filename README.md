@@ -3,6 +3,8 @@
   - THIS IS A CLOAN FROM printfuck
   - ORIGINAL: https://github.com/printfuck/stardew-multiplayer-docker
 
+  A big thanks to printfuck, Ecsport108 and HumanoidSandvichDispenser for such a great job
+
 # Stardew Valley in Docker
 
 This project aims to autostart a Stardew Valley Multiplayer Server as easy as possible.
