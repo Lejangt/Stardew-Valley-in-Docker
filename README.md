@@ -2,10 +2,10 @@
 
 This project aims to autostart a Stardew Valley Multiplayer Server as easy as possible.
 
-## INFO!!!
+## IMPORTANT INFORMATION
 
-THIS IS A CLOAN REPO FROM printfuck
-ORIGINAL: https://github.com/printfuck/stardew-multiplayer-docker
+  - THIS IS A CLOAN FROM printfuck
+  - ORIGINAL: https://github.com/printfuck/stardew-multiplayer-docker
 
 ## Setup
 
