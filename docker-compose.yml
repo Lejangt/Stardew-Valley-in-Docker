@@ -5,10 +5,9 @@ services:
     build: docker
     container_name: stardew
     environment:
-      - "VNC_PASSWORD=nyanyanya"
+      - "VNC_PASSWORD=4%R&ShmFqt"
       - "DISPLAY_HEIGHT=900"
-      - "DISPLAY_WIDTH=1200"
-      - "ENABLE_STARDWEMULTIPLAYERSERVER_MOD=${ENABLE_STARDWEMULTIPLAYERSERVER_MOD-true}"
+      - "DISPLAY_WIDTH=1500"
     ports:
       # VNC
       - 5902:5900
