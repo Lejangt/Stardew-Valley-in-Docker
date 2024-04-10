@@ -1,11 +1,11 @@
-# Stardew Valley in Docker
-
-This project aims to autostart a Stardew Valley Multiplayer Server as easy as possible.
-
 ## IMPORTANT INFORMATION
 
   - THIS IS A CLOAN FROM printfuck
   - ORIGINAL: https://github.com/printfuck/stardew-multiplayer-docker
+
+# Stardew Valley in Docker
+
+This project aims to autostart a Stardew Valley Multiplayer Server as easy as possible.
 
 ## Setup
 
@@ -14,22 +14,7 @@ This project aims to autostart a Stardew Valley Multiplayer Server as easy as po
 ```
 git clone https://github.com/printfuck/stardew-multiplayer-docker
 
-docker-compose up
-```
-### Ansible !deprecated!
-
-Create an inventory file with your hosts
-
-```
-ansible -i <your_inventori> playbook.yml
-```
-
-### Terraform (with Hetzner Cloud) !deprecated!
-
-Enter your API Token in `terraform/vars.auto.tfvars` and modify the resource section in `main.tf` to your liking, then run the following script:
-
-```
-./terra.sh
+docker-compose up -d
 ```
 
 ## Game Setup
@@ -80,3 +65,7 @@ Access the game via VNC to initially load or start a pregenerated savegame. You 
 ### Performance
 
 I'd recomend a VPS/Machine with at least four logical CPUs and 4GB Ram, otherwise there will be horrible lags. The minimum configuration I'd consider playable with two to four players would be two logical CPUs and 1GB of Ram.
+
+### NOTE
+
+If you have a problem feel free to create an issue. I do my best to solve bugs and problems but I am by no means a professional or anything else.
