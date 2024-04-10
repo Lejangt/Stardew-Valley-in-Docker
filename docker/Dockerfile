@@ -1,7 +1,25 @@
 #!/bin/bash
+export HOME=/config
+
+for modPath in /data/Stardew/Stardew\ Valley/Mods/*/
+do
+  mod=$(basename "$modPath")
+
+  # Normalize mod name to uppercase and only characters, e.g., "Always On Server" => ENABLE_ALWAYSONSERVER_MOD
+  var="ENABLE_$(echo "${mod^^}" | tr -cd '[A-Z]')_MOD"
+
+  if [ -f "${modPath}/config.json.template" ]; then
+    echo "Configuring ${modPath}config.json"
+
+    # Seed the config.json only if one isn't manually mounted in (or is empty)
+    if [ "$(cat "${modPath}config.json" 2> /dev/null)" == "" ]; then
+      envsubst < "${modPath}config.json.template" > "${modPath}config.json"
+    fi
+  fi
+done
 
 # Run extra steps for certain mods
-/opt/tail-smapi-log.sh &
+/opt/tail-smapi-log.sh
 
 # Ready to start!
 export XAUTHORITY=~/.Xauthority
