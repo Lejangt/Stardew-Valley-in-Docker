@@ -1,0 +1,21 @@
+version: '2.2'
+
+services:
+  valley:
+    build: docker
+    container_name: stardew
+    environment:
+      - "VNC_PASSWORD=nyanyanya"
+      - "DISPLAY_HEIGHT=900"
+      - "DISPLAY_WIDTH=1200"
+      - "ENABLE_STARDWEMULTIPLAYERSERVER_MOD=${ENABLE_STARDWEMULTIPLAYERSERVER_MOD-true}"
+    ports:
+      # VNC
+      - 5902:5900
+      # NOVNC WEB
+      - 5801:5800
+      # Game  
+      - 24642:24642/udp
+    volumes:
+      # Saves go here now
+      - ./valley_saves:/config/xdg/config/StardewValley/Saves
